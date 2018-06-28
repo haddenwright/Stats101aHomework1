@@ -1,0 +1,32 @@
+---
+title: "Homework 1"
+author: "Hadden Wright, Sidong Wang, Shuangning Yang, Zixin Ye"
+date: "6/28/2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+#Problem 1:
+##a) 
+The number of observations is 562 and the number of variables is 27.
+```{r, include = FALSE}
+lacer<- read.csv("/Users/haddenwright/Desktop/stats 101a/Summer 18 Homework one data-20180628/Lacer.csv")
+dim(lacer)
+```
+
+##b)
+This distribution appears to be approximately normal with mean 44.99 and standard deviation 18.45.
+```{r, echo=FALSE}
+hist(lacer$stmath03, main = "Histogram of Standardized Math Scores 2003", xlab = "Score")
+
+```
+```{r include = FALSE}
+mean(lacer$stmath03, na.rm = TRUE)
+sd(lacer$stmath03, na.rm = TRUE)
+summary(lacer$stmath03, na.rm = TRUE)
+```
+
+##c)
